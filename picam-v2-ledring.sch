@@ -1,0 +1,177 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L power:+5V #PWR03
+U 1 1 61018DCC
+P 3200 1150
+F 0 "#PWR03" H 3200 1000 50  0001 C CNN
+F 1 "+5V" H 3215 1323 50  0000 C CNN
+F 2 "" H 3200 1150 50  0001 C CNN
+F 3 "" H 3200 1150 50  0001 C CNN
+	1    3200 1150
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR04
+U 1 1 610193E0
+P 3200 1350
+F 0 "#PWR04" H 3200 1100 50  0001 C CNN
+F 1 "GND" H 3205 1177 50  0000 C CNN
+F 2 "" H 3200 1350 50  0001 C CNN
+F 3 "" H 3200 1350 50  0001 C CNN
+	1    3200 1350
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:LED_RGB D3
+U 1 1 61030AB6
+P 2200 1050
+F 0 "D3" H 2200 1547 50  0000 C CNN
+F 1 "LED_RGB" H 2200 1456 50  0000 C CNN
+F 2 "LED_SMD:LED_RGB_5050-6" H 2200 1000 50  0001 C CNN
+F 3 "~" H 2200 1000 50  0001 C CNN
+	1    2200 1050
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:LED_RGB D2
+U 1 1 61037C5C
+P 1800 1950
+F 0 "D2" H 1800 2447 50  0000 C CNN
+F 1 "LED_RGB" H 1800 2356 50  0000 C CNN
+F 2 "LED_SMD:LED_RGB_5050-6" H 1800 1900 50  0001 C CNN
+F 3 "~" H 1800 1900 50  0001 C CNN
+	1    1800 1950
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:LED_RGB D4
+U 1 1 61037C62
+P 2200 1950
+F 0 "D4" H 2200 2447 50  0000 C CNN
+F 1 "LED_RGB" H 2200 2356 50  0000 C CNN
+F 2 "LED_SMD:LED_RGB_5050-6" H 2200 1900 50  0001 C CNN
+F 3 "~" H 2200 1900 50  0001 C CNN
+	1    2200 1950
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1600 850  1600 1050
+Connection ~ 1600 1050
+Wire Wire Line
+	1600 1050 1600 1250
+Connection ~ 1600 1250
+Wire Wire Line
+	1600 1250 1600 1750
+Connection ~ 1600 1750
+Wire Wire Line
+	1600 1750 1600 1950
+Connection ~ 1600 1950
+Wire Wire Line
+	1600 1950 1600 2150
+Wire Wire Line
+	2400 850  2400 1050
+Connection ~ 2400 1050
+Wire Wire Line
+	2400 1050 2400 1250
+Connection ~ 2400 1250
+Wire Wire Line
+	2400 1250 2400 1750
+Connection ~ 2400 1750
+Wire Wire Line
+	2400 1750 2400 1950
+Connection ~ 2400 1950
+Wire Wire Line
+	2400 1950 2400 2150
+$Comp
+L power:GND #PWR0101
+U 1 1 6104AC43
+P 1600 2800
+F 0 "#PWR0101" H 1600 2550 50  0001 C CNN
+F 1 "GND" H 1605 2627 50  0000 C CNN
+F 2 "" H 1600 2800 50  0001 C CNN
+F 3 "" H 1600 2800 50  0001 C CNN
+	1    1600 2800
+	1    0    0    -1  
+$EndComp
+Connection ~ 1600 2150
+$Comp
+L power:+5V #PWR0102
+U 1 1 6104B404
+P 2400 850
+F 0 "#PWR0102" H 2400 700 50  0001 C CNN
+F 1 "+5V" H 2415 1023 50  0000 C CNN
+F 2 "" H 2400 850 50  0001 C CNN
+F 3 "" H 2400 850 50  0001 C CNN
+	1    2400 850 
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:LED_RGB D1
+U 1 1 6102FCF5
+P 1800 1050
+F 0 "D1" H 1800 1547 50  0000 C CNN
+F 1 "LED_RGB" H 1800 1456 50  0000 C CNN
+F 2 "LED_SMD:LED_RGB_5050-6" H 1800 1000 50  0001 C CNN
+F 3 "~" H 1800 1000 50  0001 C CNN
+	1    1800 1050
+	1    0    0    -1  
+$EndComp
+$Comp
+L Transistor_BJT:2N3904 Q1
+U 1 1 61064F2C
+P 1500 2600
+F 0 "Q1" H 1690 2646 50  0000 L CNN
+F 1 "2N3904" H 1690 2555 50  0000 L CNN
+F 2 "Package_TO_SOT_THT:TO-92_Inline" H 1700 2525 50  0001 L CIN
+F 3 "https://www.onsemi.com/pub/Collateral/2N3903-D.PDF" H 1500 2600 50  0001 L CNN
+	1    1500 2600
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1600 2150 1600 2400
+Connection ~ 2400 850 
+$Comp
+L Connector:Conn_01x03_Male J1
+U 1 1 6106F0B5
+P 3000 1250
+F 0 "J1" H 3108 1531 50  0000 C CNN
+F 1 "Conn_01x03_Male" H 3108 1440 50  0000 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical" H 3000 1250 50  0001 C CNN
+F 3 "~" H 3000 1250 50  0001 C CNN
+	1    3000 1250
+	1    0    0    -1  
+$EndComp
+Text GLabel 3200 1250 2    50   Input ~ 0
+GPIO
+Text GLabel 850  2600 0    50   Input ~ 0
+GPIO
+$Comp
+L Device:R R1
+U 1 1 61083465
+P 1050 2600
+F 0 "R1" V 843 2600 50  0000 C CNN
+F 1 "1.1k" V 934 2600 50  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder" V 980 2600 50  0001 C CNN
+F 3 "~" H 1050 2600 50  0001 C CNN
+	1    1050 2600
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	850  2600 900  2600
+Wire Wire Line
+	1200 2600 1300 2600
+$EndSCHEMATC
